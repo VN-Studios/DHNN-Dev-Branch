@@ -1,0 +1,83 @@
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "logo_with_text",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/Yarn_logo.png",
+            "logo_width": 140,
+            "title": "",
+            "text": ""
+          }
+        },
+        "footer-2": {
+          "type": "menu",
+          "settings": {
+            "menu": "products",
+            "title": "Products"
+          }
+        },
+        "5c38074f-6779-4787-a5a4-f815e1103368": {
+          "type": "menu",
+          "settings": {
+            "menu": "industry",
+            "title": "Industry"
+          }
+        },
+        "76e62974-0cc5-432f-bc3e-1fa3d740e46d": {
+          "type": "menu",
+          "settings": {
+            "menu": "our-services",
+            "title": "Our services"
+          }
+        },
+        "2f6635b1-9f20-4d96-a976-6bd1930bbd2b": {
+          "type": "menu",
+          "settings": {
+            "menu": "others",
+            "title": "Others"
+          }
+        },
+        "footer-3": {
+          "type": "social_media",
+          "settings": {
+            "title": "Social media",
+            "text": "<p>Want to learn more about us? Check out our recent posts and join the community.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "footer-2",
+        "5c38074f-6779-4787-a5a4-f815e1103368",
+        "76e62974-0cc5-432f-bc3e-1fa3d740e46d",
+        "2f6635b1-9f20-4d96-a976-6bd1930bbd2b",
+        "footer-3"
+      ],
+      "custom_css": [
+        ".block-footer-3 .footer__title {color: #106572;}",
+        ".footer__card-grid {display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;}",
+        "@media (max-width: 980px) {.footer__card-grid {display: grid; grid-template-columns: 1fr 1fr; }}"
+      ],
+      "settings": {
+        "color_scheme": "custom-3",
+        "container_size": "full-screen",
+        "desktop_column_count": "4",
+        "enable_border": false,
+        "bottom_bar": "footer",
+        "show_payment_icons": false,
+        "copyright_text": "Copyright © 2023, Yarn Marketplace",
+        "enable_follow_on_shop": false,
+        "show_language_selector": false,
+        "show_currency_selector": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

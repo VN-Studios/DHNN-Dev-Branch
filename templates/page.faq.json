@@ -1,0 +1,220 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": true
+      }
+    },
+    "questions": {
+      "type": "faq",
+      "blocks": {
+        "category1": {
+          "type": "category",
+          "settings": {
+            "title": "GENERAL FAQS",
+            "icon": "none"
+          }
+        },
+        "question1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "question2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "question3": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "category2": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping & Returns FAQs",
+            "icon": "none"
+          }
+        },
+        "question4": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 50
+          }
+        },
+        "question5": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "question6": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "question7": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "category3": {
+          "type": "category",
+          "settings": {
+            "title": "Ordering & Manufacturing FAQs",
+            "icon": "none"
+          }
+        },
+        "question8": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "question9": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "icon": "none",
+            "text": "<p>Brief and clear answer<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "category1",
+        "question1",
+        "question2",
+        "question3",
+        "category2",
+        "question4",
+        "question5",
+        "question6",
+        "question7",
+        "category3",
+        "question8",
+        "question9"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "section_layout": "bottom-tabs",
+        "title": "FAQ",
+        "text": "Welcome to our FAQ, we are so happy to have you here and as a client. We have tried to answer themost common questions. But if you have any further questions about the store and brand, don't",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "solid"
+      }
+    },
+    "1d503804-358e-4338-81be-509bc3267c77": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-caption-1": {
+          "type": "caption",
+          "settings": {
+            "caption": "NEWSLETTER"
+          }
+        },
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Subscribe",
+            "heading_size": "h4"
+          }
+        },
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Invite customers to subscribe for early sale access, new in, promotions, and more.",
+            "body_size": "body3"
+          }
+        },
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-subscribe-1": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-caption-1",
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-title-1",
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-text-1",
+        "template--16927600148694__1d503804-358e-4338-81be-509bc3267c77-subscribe-1"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 640,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 624,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "questions",
+    "1d503804-358e-4338-81be-509bc3267c77"
+  ]
+}

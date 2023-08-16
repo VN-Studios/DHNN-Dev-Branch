@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": true
+      }
+    },
+    "1f24a4ca-db9d-4d42-a5ee-87219dba72d4": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "icon_size": 64,
+            "title": "Icon column",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection or piece of news. Add details on shipping and return conditions, product availability, care instructions, matching colors and accessories.<\/p>",
+            "link_text": "Link label",
+            "link_url": ""
+          }
+        },
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "icon_size": 64,
+            "title": "Icon column",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection or piece of news. Add details on shipping and return conditions, product availability, care instructions, matching colors and accessories.<\/p>",
+            "link_text": "Link label",
+            "link_url": ""
+          }
+        },
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-3": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "discount-outline",
+            "icon_size": 64,
+            "title": "Icon column",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection or piece of news. Add details on shipping and return conditions, product availability, care instructions, matching colors and accessories.<\/p>",
+            "link_text": "Link label",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-1",
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-2",
+        "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-3"
+      ],
+      "settings": {
+        "classcss": "",
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Multicolumn",
+        "text": "Show multiple columns of text paired with images or icons to share useful information about your store: shipping and return conditions, special offers and upcoming sales.",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 3,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "1f24a4ca-db9d-4d42-a5ee-87219dba72d4"
+  ]
+}

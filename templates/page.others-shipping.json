@@ -1,0 +1,271 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": true
+      }
+    },
+    "2e29ed44-f160-4a44-8fb6-59878ce9ac09": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "FREE SHIPPING",
+            "text": "<p>FREE STANDARD SHIPPING with every order valued over $125OR Standard Shipping for $6.95 for orders valued under $125*Free standard shipping excludes International locations.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "STANDARD SHIPPING",
+            "text": "<p>Cost: $6.95 OR Free if order value over $125 (excl. International Shipping*)Delivery Time: Australian Standard Shipping is estimated up to 3-5 business days for dispatch, 1-5 business days (rural area: 3-14 business days) for transit.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-3": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "EXPRESS SHIPPING",
+            "text": "<p>Cost: $14.95Delivery Time: Australian Express Shipping is estimated up to 3 business day for dispatch, 1-3 business days for transit to Metropolitan areas or up to 5 business days for remote areas.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "88030399-fc64-4ed1-8264-189f242bec67": {
+          "type": "column",
+          "settings": {
+            "desktop_image_width": 100,
+            "mobile_image_width": 100,
+            "image_ratio": 1,
+            "title": "*INTERNATIONAL SHIPPING",
+            "text": "<p>Cost: Calculated at checkout by Australia Post.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "57127146-772c-4757-b65f-97cc6de31ee3": {
+          "type": "column",
+          "settings": {
+            "desktop_image_width": 100,
+            "mobile_image_width": 100,
+            "image_ratio": 1,
+            "title": "*INTERNATIONAL SHIPPING",
+            "text": "<p>Cost: Calculated at checkout by Australia Post.<\/p>",
+            "link_text": "Link label",
+            "link_url": ""
+          }
+        },
+        "9381e54a-c631-4483-a512-d3e364ef0b46": {
+          "type": "column",
+          "settings": {
+            "desktop_image_width": 100,
+            "mobile_image_width": 100,
+            "image_ratio": 1,
+            "title": "PICK UP ORDERS (ONLINE ONLY)",
+            "text": "<p>We offer local pickup during the checkout process for collection from our Brisbane warehouse. Generally orders are ready to pickup within 2 hrs but we ask that you not arrive before receiving the confirmation email.Orders received before 12:00pm will be ready for pickup same day.Our operating hours are Monday to Friday, 9am to 4pm.Our warehouse address for pickup is:YARN Marketplace  <\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-1",
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-2",
+        "template--16929730527446__2e29ed44-f160-4a44-8fb6-59878ce9ac09-column_with_icon-3",
+        "88030399-fc64-4ed1-8264-189f242bec67",
+        "57127146-772c-4757-b65f-97cc6de31ee3",
+        "9381e54a-c631-4483-a512-d3e364ef0b46"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Shipping",
+        "text": "",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 5,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "e820965c-969e-4ab8-a00b-22e50810c580": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-1": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "What items are returnable?",
+            "text": "<p>Any item within 45 days of receipt of your shipment (excludes Yarn Gallery artwork)The item must be in original condition, unwashed and unworn with tags attached (you can of course try it on)Yarn Gallery artwork must be returned within 7 days of receipt of your shipment & you must contact a customer representative to arrange associated postage\/courier costs.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-2": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "What items are non-refundable?",
+            "text": "<p>Free gifts or promotional itemsEarrings, face masks, quilt covers and sheet sets are unfortunately not eligible for returns due to hygiene and safety reasons. Please note if the item is faulty, it is of course exempt from this rule.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-3": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "Are there any charges for return?",
+            "text": "<p>There are no charges for returnsOriginal shipping charges are non-refundable unless you have received the INCORRECT items.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "af8cb7bb-3128-4eb5-9a12-9ff626b2816c": {
+          "type": "column_with_icon",
+          "settings": {
+            "icon": "none",
+            "icon_size": 64,
+            "title": "How do I return?",
+            "text": "<p>Normal Refunds<\/p><p>Simply enter your order number and email address into the Returns Portal below, follow the screen instructions and select the items you want to return. You will be provided with a free Australia Post return label on completion. Please print and attached it to your return parcel and take to any Australia Post shop.<\/p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-1",
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-2",
+        "template--16929730527446__e820965c-969e-4ab8-a00b-22e50810c580-column_with_icon-3",
+        "af8cb7bb-3128-4eb5-9a12-9ff626b2816c"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "title": "Returns",
+        "text": "PLEASE NOTE: The returns process can take a number of days. This includes the time it takes for your returned item to be shipped back to us and then 1-2 days for processing after the delivery has arrived at our warehouse.",
+        "heading_size": "h5",
+        "body_size": "body3",
+        "content_alignment": "center",
+        "column_heading_size": "h7",
+        "column_body_size": "body4",
+        "column_alignment": "center",
+        "desktop_columns": 4,
+        "desktop_space_between_cards": 24,
+        "mobile_space_between_cards": 16,
+        "content_spacing": 24,
+        "show_column_background": false,
+        "enable_carousel_on_mobile": false,
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "outline"
+      }
+    },
+    "91899a23-04d4-4091-855d-9bb357687ccd": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": "find your order"
+      }
+    },
+    "c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-caption-1": {
+          "type": "caption",
+          "settings": {
+            "caption": "NEWSLETTER"
+          }
+        },
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Subscribe",
+            "heading_size": "h4"
+          }
+        },
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Invite customers to subscribe for early sale access, new in, promotions, and more.",
+            "body_size": "body3"
+          }
+        },
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-subscribe-1": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-caption-1",
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-title-1",
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-text-1",
+        "template--16929730527446__c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5-subscribe-1"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 640,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 624,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "2e29ed44-f160-4a44-8fb6-59878ce9ac09",
+    "e820965c-969e-4ab8-a00b-22e50810c580",
+    "91899a23-04d4-4091-855d-9bb357687ccd",
+    "c68a56e9-af8e-4fb1-a94c-3a8d9997c7d5"
+  ]
+}
