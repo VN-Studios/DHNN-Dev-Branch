@@ -11,6 +11,7 @@
   assign section_spacing_bottom = options.section_spacing_bottom
   assign container_size = options.container_size
   assign heading_size = options.heading_size
+  assign enable_background_around_container = options.enable_background_around_container
   assign body_size = options.body_size
 -%}
 
@@ -23,8 +24,6 @@
     }
 
     .field-group {
-    flex-flow: column;
-    gap: 1.6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -33,179 +32,199 @@
 
 {% render 'inline-css-minifier', css: css %}
 
-<div class='contact section section-{{ section.id }} color-{{ color_scheme }}'>
-  <div class='contact__container container container--{{ container_size }} section-spacing'>
-    {%- if title != blank or text != blank -%}
-      <div class='contact__content'>
-        {%- if title != blank -%}
-          <h5 class='contact__title {{ heading_size }}'>{{ title }}</h5>
-        {%- endif -%}
-        {%- if text != blank -%}
-          <div class='rte contact__text body-font-weight-from-global-settings {{ body_size }}'>
-            {{ text }}
+<div class='contact section section-{{ section.id }} {% unless enable_background_around_container %} section color-{{ color_scheme }}{% endunless %}'>
+  <div class='contact__container container {% if enable_background_around_container == false %} container--{{ container_size }} {% endif %} section-spacing'>
+    <div class="contact-container {% if enable_background_around_container %} rich-text__container--with-aside-spacing section color-{{ color_scheme }}{% endif %}">
+      <div class="{% if enable_background_around_container == true %} container container--{{ container_size }} {% endif %}">
+
+        {%- if title != blank or text != blank -%}
+          <div class='contact__content'>
+            {%- if title != blank -%}
+              <h5 class='contact__title {{ heading_size }}'>{{ title }}</h5>
+            {%- endif -%}
+            {%- if text != blank -%}
+              <div class='rte contact__text body-font-weight-from-global-settings {{ body_size }}'>
+                {{ text }}
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
+
+        {%- form 'contact', id: 'ContactForm', class: 'contact__form' -%}
+          {%- if form.posted_successfully? -%}
+            <script>
+              window.addEventListener('load', () => {
+                window.bodyElement.notification.show('Message has been sent', 'success')
+              })
+            </script>
+          {%- endif -%}
+
+          {%- if form.errors -%}
+            {%- assign error = form.errors.translated_fields.email
+              | capitalize
+              | append: ' '
+              | append: form.errors.messages.email
+            -%}
+            <script>
+              window.addEventListener('load', () => {
+                window.bodyElement.notification.show('{{ error }}', 'warning')
+              })
+            </script>
+          {%- endif -%}
+
+          <div class='field-group contact__field-group'>
+            <div class='field contact__field'>
+              <label class='visually-hidden' for='ContactForm-FirstNameInput-{{ form.id }}'>
+                {{- 'templates.contact.form.firstname' | t -}} *
+              </label>
+              <input
+                class='input input--large input--{{ input_style }}'
+                autocomplete='firstname'
+                type='text'
+                name='contact[{{ 'templates.contact.form.firstname' | t }}]'
+                value='{% if form.firstname %}{{ form.firstname }}{% endif %}'
+                placeholder='{{ 'templates.contact.form.firstname' | t }} *'
+                id='ContactForm-firstnameInput-{{ form.id }}'
+                required
+              >
+            </div>
+            <div class='field contact__field'>
+              <label class='visually-hidden' for='ContactForm-LastNameInput-{{ form.id }}'>
+                {{- 'templates.contact.form.lastname' | t -}} *
+              </label>
+              <input
+                class='input input--large input--{{ input_style }}'
+                autocomplete='lastname'
+                type='text'
+                name='contact[{{ 'templates.contact.form.lastname' | t }}]'
+                value='{% if form.lastname %}{{ form.lastname }}{% endif %}'
+                placeholder='{{ 'templates.contact.form.lastname' | t }} *'
+                id='ContactForm-LastNameInput-{{ form.id }}'
+                required
+              >
+            </div>
+            <div class='field contact__field'>
+              <label class='visually-hidden' for='ContactForm-EmailInput-{{ form.id }}'>
+                {{- 'templates.contact.form.email' | t -}} *
+              </label>
+              <input
+                autocomplete='email'
+                type='email'
+                class='input input--large input--{{ input_style }}'
+                name='contact[email]'
+                spellcheck='false'
+                autocapitalize='off'
+                value='{% if form.email %}{{ form.email }}{% endif %}'
+                aria-required='true'
+                placeholder='{{ 'templates.contact.form.email' | t }} *'
+                id='ContactForm-EmailInput-{{ form.id }}'
+                required
+              >
+            </div>
+    
+
+          {%- if show_phone -%}
+            <div class='field contact__field'>
+              <label class='visually-hidden' for='ContactForm-PhoneInput-{{ form.id }}'>
+                {{- 'templates.contact.form.phone' | t -}}
+              </label>
+              <input
+                type='tel'
+                class='input input--large input--{{ input_style }}'
+                autocomplete='tel'
+                name='contact[{{ 'templates.contact.form.phone' | t }}]'
+                pattern='[0-9\-]*'
+                value='{% if form.phone %}{{ form.phone }}{% endif %}'
+                placeholder='{{ 'templates.contact.form.phone' | t }} *'
+                id='ContactForm-PhoneInput-{{ form.id }}'
+                required
+              >
+            </div>
+          {%- endif -%}
+          <div class='field contact__field'>
+            <label class='visually-hidden' for='ContactForm-FacebookInput-{{ form.id }}'>
+              {{- 'templates.contact.form.facebook' | t -}}
+            </label>
+            <input
+              class='input input--large input--{{ input_style }}'
+              autocomplete='facebook'
+              type='text'
+              name='contact[{{ 'templates.contact.form.facebook' | t }}]'
+              value='{% if form.facebook %}{{ form.facebook }}{% endif %}'
+              placeholder='{{ 'templates.contact.form.facebook' | t }}'
+              id='ContactForm-FacebookNameInput-{{ form.id }}'
+            >
+          </div>
+          <div class='field contact__field'>
+            <label class='visually-hidden' for='ContactForm-InstagramInput-{{ form.id }}'>
+              {{- 'templates.contact.form.instagram' | t -}}
+            </label>
+            <input
+              class='input input--large input--{{ input_style }}'
+              autocomplete='instagram'
+              type='text'
+              name='contact[{{ 'templates.contact.form.instagram' | t }}]'
+              value='{% if form.instagram %}{{ form.instagram }}{% endif %}'
+              placeholder='{{ 'templates.contact.form.instagram' | t }}'
+              id='ContactForm-InstagramNameInput-{{ form.id }}''
+            >
+          </div>
+
+                </div>
+
+          <div class='field contact__field'>
+            <label class='hidden' for='ContactForm-MessageInput-{{ form.id }}'>
+              {{- 'templates.contact.form.message' | t -}}
+            </label>
+            <textarea
+              class='textarea textarea--{{ input_style }}'
+              name='contact[{{ 'templates.contact.form.comment' | t }}]'
+              placeholder='{{ 'templates.contact.form.message' | t }}'
+              id='ContactForm-MessageInput-{{ form.id }}'
+            >
+              {{- form.body -}}
+            </textarea>
+          </div>
+
+          {% comment %} {%- if show_captcha -%}
+            <div class='contact__captcha-note'>
+              {{ 'sections.contact_form.captcha_note' | t }}
+            </div>
+          {%- endif -%} {% endcomment %}
+
+
+          <div class="field contact__field field-group contact__field-group">
+            <div class="field contact__field ">
+              <label class='' for='ContactForm-fileInput-{{ form.id }}'>
+                {{- 'templates.contact.form.file' | t -}} *
+              </label>
+              <div class="file_design">
+                <label class='' for='ContactForm-fileInput-{{ form.id }}'>
+                  Choose file
+                </label>
+                <input
+                  type='file'
+                  class='input input--large input--{{ input_style }}'
+                  autocomplete='tel'
+                  name='contact[{{ 'templates.contact.form.file' | t }}]'
+                  id='ContactForm-fileInput-{{ form.id }}'
+                  required
+                >
+              </div>
+            </div>
+            <div class="field contact__field contact__field_right">
+              <button
+                type='submit'
+                class='btn btn--solid btn--lg contact__btn'
+                aria-label='{{ 'templates.contact.form.send' | t }}'
+              >
+                {{ 'templates.contact.form.send' | t }}
+              </button>
+            </div>
+          </div>
+        {%- endform -%}
       </div>
-    {%- endif -%}
-
-    {%- form 'contact', id: 'ContactForm', class: 'contact__form' -%}
-      {%- if form.posted_successfully? -%}
-        <script>
-          window.addEventListener('load', () => {
-            window.bodyElement.notification.show('Message has been sent', 'success')
-          })
-        </script>
-      {%- endif -%}
-
-      {%- if form.errors -%}
-        {%- assign error = form.errors.translated_fields.email
-          | capitalize
-          | append: ' '
-          | append: form.errors.messages.email
-        -%}
-        <script>
-          window.addEventListener('load', () => {
-            window.bodyElement.notification.show('{{ error }}', 'warning')
-          })
-        </script>
-      {%- endif -%}
-
-      <div class='field-group contact__field-group'>
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-NameInput-{{ form.id }}'>
-            {{- 'templates.contact.form.name' | t -}}
-          </label>
-          <input
-            class='input input--large input--{{ input_style }}'
-            autocomplete='name'
-            type='text'
-            name='contact[{{ 'templates.contact.form.name' | t }}]'
-            value='{% if form.name %}{{ form.name }}{% endif %}'
-            placeholder='{{ 'templates.contact.form.name' | t }}'
-            id='ContactForm-NameInput-{{ form.id }}'
-            required
-          >
-        </div>
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-EmailInput-{{ form.id }}'>
-            {{- 'templates.contact.form.email' | t -}}
-          </label>
-          <input
-            autocomplete='email'
-            type='email'
-            class='input input--large input--{{ input_style }}'
-            name='contact[email]'
-            spellcheck='false'
-            autocapitalize='off'
-            value='{% if form.email %}{{ form.email }}{% endif %}'
-            aria-required='true'
-            placeholder='{{ 'templates.contact.form.email' | t }}'
-            id='ContactForm-EmailInput-{{ form.id }}'
-            required
-          >
-        </div>
- 
-
-      {%- if show_phone -%}
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-PhoneInput-{{ form.id }}'>
-            {{- 'templates.contact.form.phone' | t -}}
-          </label>
-          <input
-            type='tel'
-            class='input input--large input--{{ input_style }}'
-            autocomplete='tel'
-            name='contact[{{ 'templates.contact.form.phone' | t }}]'
-            pattern='[0-9\-]*'
-            value='{% if form.phone %}{{ form.phone }}{% endif %}'
-            placeholder='{{ 'templates.contact.form.phone' | t }}'
-            id='ContactForm-PhoneInput-{{ form.id }}'
-          >
-        </div>
-      {%- endif -%}
-       {%- if show_phone -%}
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-PhoneInput-{{ form.id }}'>
-            {{- 'templates.contact.form.phone' | t -}}
-          </label>
-          <input
-            type='tel'
-            class='input input--large input--{{ input_style }}'
-            autocomplete='tel'
-            name='contact[{{ 'templates.contact.form.phone' | t }}]'
-            pattern='[0-9\-]*'
-            value='{% if form.phone %}{{ form.phone }}{% endif %}'
-            placeholder='{{ 'templates.contact.form.phone' | t }}'
-            id='ContactForm-PhoneInput-{{ form.id }}'
-          >
-        </div>
-      {%- endif -%}
-       {%- if show_phone -%}
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-PhoneInput-{{ form.id }}'>
-            {{- 'templates.contact.form.phone' | t -}}
-          </label>
-          <input
-            type='tel'
-            class='input input--large input--{{ input_style }}'
-            autocomplete='tel'
-            name='contact[{{ 'templates.contact.form.phone' | t }}]'
-            pattern='[0-9\-]*'
-            value='{% if form.phone %}{{ form.phone }}{% endif %}'
-            placeholder='{{ 'templates.contact.form.phone' | t }}'
-            id='ContactForm-PhoneInput-{{ form.id }}'
-          >
-        </div>
-      {%- endif -%}
-       {%- if show_phone -%}
-        <div class='field contact__field'>
-          <label class='visually-hidden' for='ContactForm-PhoneInput-{{ form.id }}'>
-            {{- 'templates.contact.form.phone' | t -}}
-          </label>
-          <input
-            type='tel'
-            class='input input--large input--{{ input_style }}'
-            autocomplete='tel'
-            name='contact[{{ 'templates.contact.form.phone' | t }}]'
-            pattern='[0-9\-]*'
-            value='{% if form.phone %}{{ form.phone }}{% endif %}'
-            placeholder='{{ 'templates.contact.form.phone' | t }}'
-            id='ContactForm-PhoneInput-{{ form.id }}'
-          >
-        </div>
-      {%- endif -%}
-
-             </div>
-
-      <div class='field contact__field'>
-        <label class='hidden' for='ContactForm-MessageInput-{{ form.id }}'>
-          {{- 'templates.contact.form.message' | t -}}
-        </label>
-        <textarea
-          class='textarea textarea--{{ input_style }}'
-          name='contact[{{ 'templates.contact.form.comment' | t }}]'
-          placeholder='{{ 'templates.contact.form.message' | t }}'
-          id='ContactForm-MessageInput-{{ form.id }}'
-          required
-        >
-          {{- form.body -}}
-        </textarea>
-      </div>
-
-      {%- if show_captcha -%}
-        <div class='contact__captcha-note'>
-          {{ 'sections.contact_form.captcha_note' | t }}
-        </div>
-      {%- endif -%}
-
-      <button
-        type='submit'
-        class='btn btn--solid btn--lg contact__btn'
-        aria-label='{{ 'templates.contact.form.send' | t }}'
-      >
-        {{ 'templates.contact.form.send' | t }}
-      </button>
-    {%- endform -%}
+    </div>
   </div>
 </div>
 
@@ -248,9 +267,19 @@
       "info": "t:sections.general_section_settings.color_scheme_tip"
     },
     {
+      "type": "checkbox",
+      "id": "enable_background_around_container",
+      "default": false,
+      "label": "t:sections.general_section_settings.enable_background_around_container_label"
+    },
+    {
       "type": "select",
       "id": "container_size",
       "options": [
+        {
+          "value": "full-screen",
+          "label": "Full screen"
+        },
         {
           "value": "page-width",
           "label": "t:sections.general_section_settings.container_size.page_width_option"

@@ -277,6 +277,12 @@
         "label": "t:settings_schema.color_pallets.primary_button_text_color.label"
       },
       {
+        "type": "color",
+        "id": "primary_outline_button_color",
+        "default": "#222222",
+        "label": "Outline button color"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.color_pallets.secondary_pallet_settings_header.content"
       },
@@ -315,6 +321,12 @@
         "id": "secondary_button_text_color",
         "default": "#FFFFFF",
         "label": "t:settings_schema.color_pallets.secondary_button_text_color.label"
+      },
+      {
+        "type": "color",
+        "id": "secondary_outline_button_color",
+        "default": "#222222",
+        "label": "Outline button color"
       },
       {
         "type": "header",
@@ -357,6 +369,12 @@
         "label": "t:settings_schema.color_pallets.custom_1_button_text_color.label"
       },
       {
+        "type": "color",
+        "id": "custom_1_outline_button_color",
+        "default": "#222222",
+        "label": "Outline button color"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.color_pallets.custom_2_pallet_settings_header.content"
       },
@@ -397,6 +415,12 @@
         "label": "t:settings_schema.color_pallets.custom_2_button_text_color.label"
       },
       {
+        "type": "color",
+        "id": "custom_2_outline_button_color",
+        "default": "#222222",
+        "label": "Outline button color"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.color_pallets.custom_3_pallet_settings_header.content"
       },
@@ -435,6 +459,12 @@
         "id": "custom_3_button_text_color",
         "default": "#383930",
         "label": "t:settings_schema.color_pallets.custom_3_button_text_color.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_3_outline_button_color",
+        "default": "#222222",
+        "label": "Outline button color"
       }
     ]
   },

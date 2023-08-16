@@ -13,7 +13,6 @@
     },
     "0be55b5a-f91d-455e-931b-f191cc8946c7": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "template--16930581610710__0be55b5a-f91d-455e-931b-f191cc8946c7-column_with_icon-1": {
           "type": "column_with_icon",
@@ -55,6 +54,7 @@
         "template--16930581610710__0be55b5a-f91d-455e-931b-f191cc8946c7-column_with_icon-2",
         "template--16930581610710__0be55b5a-f91d-455e-931b-f191cc8946c7-column_with_icon-3"
       ],
+      "disabled": true,
       "settings": {
         "classcss": "",
         "color_scheme": "default",

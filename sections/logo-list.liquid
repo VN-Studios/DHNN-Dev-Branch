@@ -2,6 +2,8 @@
   assign options = section.settings
   assign section_spacing_top = options.section_spacing_top
   assign section_spacing_bottom = options.section_spacing_bottom
+  assign section_mobile_spacing_top = options.section_mobile_spacing_top
+  assign section_mobile_spacing_bottom = options.section_mobile_spacing_bottom
   assign color_scheme = options.color_scheme
   assign title = options.title
   assign alignment = options.alignment
@@ -43,6 +45,20 @@
         --gsc-space-between-cards: {{ mobile_space_between_cards }}rem;
         --gsc-section-spacing-top: {{ section_spacing_top }}px;
         --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
+    }
+
+    @media only screen and (min-width:768px) and (max-width:1199px) {
+        .section-{{section.id}} {
+              --gsc-section-spacing-top: {{ section_spacing_top | times: 0.50 }}px;
+              --gsc-section-spacing-bottom: {{ section_spacing_bottom | times: 0.50 }}px;
+          }
+      }
+
+    @media only screen and (max-width:767px) {
+      .section-{{section.id}} {
+            --gsc-section-spacing-top: {{ section_mobile_spacing_top }}px;
+            --gsc-section-spacing-bottom: {{ section_mobile_spacing_bottom }}px;
+        }
     }
 
     @media {% render 'media-queries', screen: 'md' %} {
@@ -223,11 +239,15 @@
       "label": "t:sections.general_section_settings.container_size.label"
     },
     {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
       "type": "range",
       "id": "section_spacing_top",
       "min": 0,
-      "max": 100,
-      "step": 1,
+      "max": 200,
+      "step": 2,
       "default": 48,
       "unit": "t:sections.general_section_settings.section_spacing_top.unit",
       "label": "t:sections.general_section_settings.section_spacing_top.label"
@@ -236,9 +256,33 @@
       "type": "range",
       "id": "section_spacing_bottom",
       "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 48,
+      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_top",
+      "min": 0,
       "max": 100,
       "step": 1,
-      "default": 48,
+      "default": 30,
+      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+      "label": "t:sections.general_section_settings.section_spacing_top.label"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
       "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
       "label": "t:sections.general_section_settings.section_spacing_bottom.label"
     },

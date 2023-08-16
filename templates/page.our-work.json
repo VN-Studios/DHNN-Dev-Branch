@@ -19,8 +19,8 @@
         "container_size": "full-screen",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
-        "desktop_height": 580,
-        "mobile_height": 600,
+        "desktop_height": 540,
+        "mobile_height": 340,
         "desktop_overlay_opacity": 19,
         "mobile_overlay_opacity": 20,
         "caption": "",
@@ -80,8 +80,10 @@
       "settings": {
         "color_scheme": "default",
         "container_size": "large",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "section_spacing_top": 120,
+        "section_spacing_bottom": 120,
+        "section_mobile_spacing_top": 40,
+        "section_mobile_spacing_bottom": 40,
         "content_layout": "left",
         "image_layout": "collage",
         "img_ratio": 1.3,
@@ -104,7 +106,6 @@
     },
     "9d08d42c-2ddf-4def-ac96-67bfc68de768": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "template--16929721680086__9d08d42c-2ddf-4def-ac96-67bfc68de768-icon-1": {
           "type": "icon",
@@ -155,18 +156,21 @@
         "template--16929721680086__9d08d42c-2ddf-4def-ac96-67bfc68de768-text-1",
         "template--16929721680086__9d08d42c-2ddf-4def-ac96-67bfc68de768-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
         "container_size": "page-width",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
-        "content_align": "center"
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
+        "content_align": "center",
+        "mobile_content_align": "center"
       }
     },
     "89f358aa-7269-44ce-b8ac-e5a837e39c72": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "template--16929721680086__89f358aa-7269-44ce-b8ac-e5a837e39c72-column_with_icon-1": {
           "type": "column_with_icon",
@@ -220,12 +224,15 @@
         "template--16929721680086__89f358aa-7269-44ce-b8ac-e5a837e39c72-column_with_icon-3",
         "3c041648-d629-42aa-94aa-9c9fce416faf"
       ],
+      "disabled": true,
       "settings": {
         "classcss": "",
         "color_scheme": "default",
         "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
         "title": "",
         "text": "OUR PRINTING TECHNOLOGIES",
         "heading_size": "h5",
@@ -248,16 +255,18 @@
     "3ad76cb7-396f-46a8-a85e-74a8dc3d01dd": {
       "type": "logo-list",
       "blocks": {
-        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-1": {
+        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-2": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_2.png",
             "image_width": 100,
             "link": ""
           }
         },
-        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-2": {
+        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-1": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_1.png",
             "image_width": 100,
             "link": ""
           }
@@ -265,6 +274,7 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-3": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_3.png",
             "image_width": 100,
             "link": ""
           }
@@ -272,6 +282,7 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-4": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_2.png",
             "image_width": 100,
             "link": ""
           }
@@ -279,6 +290,7 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-5": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_4.png",
             "image_width": 100,
             "link": ""
           }
@@ -286,6 +298,7 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-6": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_3.png",
             "image_width": 100,
             "link": ""
           }
@@ -293,6 +306,7 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-7": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_1.png",
             "image_width": 100,
             "link": ""
           }
@@ -300,14 +314,15 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-8": {
           "type": "logo",
           "settings": {
+            "image": "shopify:\/\/shop_images\/PartnerLogosMobile_4.png",
             "image_width": 100,
             "link": ""
           }
         }
       },
       "block_order": [
-        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-1",
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-2",
+        "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-1",
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-3",
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-4",
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-5",
@@ -316,13 +331,15 @@
         "template--16929788723414__3ad76cb7-396f-46a8-a85e-74a8dc3d01dd-logo-8"
       ],
       "custom_css": [
-        ".h5 {background: #106572; border-radius: 18px !important; color: #ffffff; font-weight: 500; font-family: \"DM Sans\"; font-size: 12px; padding: 6px 12px 6px 12px; min-height: 2px !important; max-width: fit-content; margin: 0 auto;}"
+        ".h5 {background: #106572; border-radius: 18px !important; color: #ffffff; font-family: \"DM Sans\"; min-height: 2px !important; max-width: fit-content; margin: 0 auto; font-size: 14px; font-style: normal; font-weight: 500; line-height: 18px; padding: 4px 12px;}"
       ],
       "settings": {
         "color_scheme": "default",
         "container_size": "page-width",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "section_spacing_top": 120,
+        "section_spacing_bottom": 120,
+        "section_mobile_spacing_top": 40,
+        "section_mobile_spacing_bottom": 40,
         "title": "OUR CLIENTS",
         "heading_size": "h5",
         "alignment": "center",
@@ -338,9 +355,9 @@
         "template--16929788723414__0bd4fc0e-12e9-4254-97bf-03be54065048-quote-4": {
           "type": "quote",
           "settings": {
-            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
-            "author_name": "Author",
-            "author_image": "shopify:\/\/shop_images\/946feea23d7346daa20c0c00336dc9ad_thumbnail_0000000000_small_jpg.png",
+            "text": "We are thrilled to be in partnership with Yarn, who are truly committed to amplifying indigenous voices and wisdom. Through a number of innovate projects, we will work together to ensure that we can break the cycle of illiteracy and disadvantage for Aboriginal and Torres Strait Islander children and young people. It is a privilege to work alongside an organisation that, like ALNF, is so passionate about uplifting and supporting communities across the nation.",
+            "author_name": "Kim Kelly",
+            "author_image": "shopify:\/\/shop_images\/Image_Placeholder_dd175353-38ce-426c-b9d6-cbde5f09ece9.png",
             "rating": 4.5,
             "link": ""
           }
@@ -399,6 +416,7 @@
         "template--16929788723414__0bd4fc0e-12e9-4254-97bf-03be54065048-quote-5",
         "template--16929788723414__0bd4fc0e-12e9-4254-97bf-03be54065048-quote-6"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "custom-2",
         "enable_background_around_container": false,
@@ -407,12 +425,108 @@
         "section_spacing_bottom": 96,
         "section_layout": "right-quotes",
         "cards_per_slide": 1,
-        "quote_alignment": "center",
-        "image": "shopify:\/\/shop_images\/wild-caught-marine-collagen-scales-texture_jpg.jpg",
+        "quote_alignment": "left",
+        "image": "shopify:\/\/shop_images\/div.media2.jpg",
         "caption": "TESTIMONIALS",
         "title": "Your feedback helps us get it right",
         "text": "",
         "heading_size": "h3",
+        "body_size": "body3",
+        "btn_text": "",
+        "btn_url": "",
+        "enable_autoplay": false,
+        "autoplay_interval": 3
+      }
+    },
+    "a37223ac-4ba5-4e7f-882d-129025ff83a9": {
+      "type": "testimonials-two",
+      "blocks": {
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-1": {
+          "type": "quote",
+          "settings": {
+            "text": "We are thrilled to be in partnership with Yarn, who are truly committed to amplifying indigenous voices and wisdom. Through a number of innovate projects, we will work together to ensure that we can break the cycle of illiteracy and disadvantage for Aboriginal and Torres Strait Islander children and young people. It is a privilege to work alongside an organisation that, like ALNF, is so passionate about uplifting and supporting communities across the nation.",
+            "author_name": "Kim Kelly",
+            "author_designation": "ALNF CO-FOUNDER, EXECUTIVE DIRECTOR",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-2": {
+          "type": "quote",
+          "settings": {
+            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
+            "author_name": "Author",
+            "author_designation": "Author designation",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-3": {
+          "type": "quote",
+          "settings": {
+            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
+            "author_name": "Author",
+            "author_designation": "Author designation",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-4": {
+          "type": "quote",
+          "settings": {
+            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
+            "author_name": "Author",
+            "author_designation": "Author designation",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-5": {
+          "type": "quote",
+          "settings": {
+            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
+            "author_name": "Author",
+            "author_designation": "Author designation",
+            "rating": 4.5,
+            "link": ""
+          }
+        },
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-6": {
+          "type": "quote",
+          "settings": {
+            "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
+            "author_name": "Author",
+            "author_designation": "Author designation",
+            "rating": 4.5,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-1",
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-2",
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-3",
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-4",
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-5",
+        "template--16939471896790__a37223ac-4ba5-4e7f-882d-129025ff83a9-quote-6"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "enabel_rating": false,
+        "container_size": "page-width",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 8,
+        "section_layout": "right-quotes",
+        "cards_per_slide": 1,
+        "quote_alignment": "left",
+        "section_bg": "#4299a9",
+        "content_color": "#f7f1d5",
+        "image": "shopify:\/\/shop_images\/Frame_41670.png",
+        "caption": "TESTIMONIALS",
+        "title": "Your feedback helps usget it right",
+        "text": "",
+        "heading_size": "h1",
         "body_size": "body3",
         "btn_text": "",
         "btn_url": "",
@@ -489,6 +603,7 @@
     "89f358aa-7269-44ce-b8ac-e5a837e39c72",
     "3ad76cb7-396f-46a8-a85e-74a8dc3d01dd",
     "0bd4fc0e-12e9-4254-97bf-03be54065048",
+    "a37223ac-4ba5-4e7f-882d-129025ff83a9",
     "77fc6bbe-48bb-4fa4-807b-4a1e90a8b88a"
   ]
 }

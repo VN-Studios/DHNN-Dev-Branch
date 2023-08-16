@@ -1149,7 +1149,6 @@
     },
     "10bdb2ac-a2d1-4fcf-b630-8bba1a5ed6c2": {
       "type": "instagram",
-      "disabled": true,
       "blocks": {
         "template--16927600050390__10bdb2ac-a2d1-4fcf-b630-8bba1a5ed6c2-post-1": {
           "type": "post",
@@ -1190,6 +1189,7 @@
         "template--16927600050390__10bdb2ac-a2d1-4fcf-b630-8bba1a5ed6c2-post-3",
         "template--16927600050390__10bdb2ac-a2d1-4fcf-b630-8bba1a5ed6c2-post-4"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "container_size": "small",

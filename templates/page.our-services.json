@@ -20,14 +20,14 @@
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
         "desktop_height": 580,
-        "mobile_height": 600,
+        "mobile_height": 340,
         "desktop_img": "shopify:\/\/shop_images\/d4452218ffccc2392df915d618a8f31c.png",
-        "desktop_overlay_opacity": 35,
-        "mobile_overlay_opacity": 35,
+        "desktop_overlay_opacity": 40,
+        "mobile_overlay_opacity": 60,
         "caption": "",
         "title": "Our services",
         "text": "",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "body_size": "body3",
         "desktop_content_position": "align-items:center;justify-content:center;",
         "desktop_content_align": "center",
@@ -66,7 +66,7 @@
           "type": "heading",
           "settings": {
             "title": "Supply your own artwork",
-            "heading_size": "h5"
+            "heading_size": "h2"
           }
         },
         "template--16929721680086__9d08d42c-2ddf-4def-ac96-67bfc68de768-text-1": {
@@ -98,15 +98,18 @@
         "template--16929721680086__9d08d42c-2ddf-4def-ac96-67bfc68de768-buttons-1"
       ],
       "custom_css": [
-        ".btn {background: #f7c156 !important; color: #222222 !important;}"
+
       ],
       "settings": {
         "color_scheme": "custom-3",
         "enable_background_around_container": false,
-        "container_size": "medium",
-        "section_spacing_top": 51,
-        "section_spacing_bottom": 0,
-        "content_align": "center"
+        "container_size": "small",
+        "section_spacing_top": 80,
+        "section_spacing_bottom": 80,
+        "section_mobile_spacing_top": 32,
+        "section_mobile_spacing_bottom": 32,
+        "content_align": "center",
+        "mobile_content_align": "left"
       }
     },
     "13efbce2-3cc8-45da-8fa9-16428dd8ca34": {
@@ -149,8 +152,10 @@
       "settings": {
         "color_scheme": "default",
         "container_size": "medium",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "section_spacing_top": 120,
+        "section_spacing_bottom": 120,
+        "section_mobile_spacing_top": 40,
+        "section_mobile_spacing_bottom": 40,
         "content_layout": "right",
         "image_layout": "collage",
         "img_ratio": 1.3,
@@ -162,7 +167,7 @@
         "heading_size": "h2",
         "body_size": "body3",
         "content_alignment": "left",
-        "desktop_content_width": 460,
+        "desktop_content_width": 520,
         "first_button_text": "",
         "first_button_link": "",
         "first_button_style": "solid",
@@ -206,14 +211,15 @@
         "template--16929721680086__b3ea78ba-73af-4eb0-85c2-d36e72d46f55-image-4"
       ],
       "custom_css": [
-        ".btn {background: #f7c156 !important; color: #222222 !important;}",
         "strong {color: #106572; font-weight: 400;}"
       ],
       "settings": {
         "color_scheme": "default",
-        "container_size": "large",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "container_size": "medium",
+        "section_spacing_top": 120,
+        "section_spacing_bottom": 120,
+        "section_mobile_spacing_top": 40,
+        "section_mobile_spacing_bottom": 40,
         "content_layout": "left",
         "image_layout": "collage",
         "img_ratio": 1.3,
@@ -290,21 +296,23 @@
         "3c041648-d629-42aa-94aa-9c9fce416faf"
       ],
       "custom_css": [
-        ".rte.multicolumn__text {background: #106572; border-radius: 18px !important; color: #ffffff; font-weight: 500; font-family: \"DM Sans\"; font-size: 12px; padding: 6px 12px 6px 12px; min-height: 2px !important;}"
+        ".rte.multicolumn__text {background: #106572; border-radius: 18px !important; color: #ffffff; font-size: 14px; font-style: normal; font-weight: 500; line-height: 18px; padding: 4px 12px;}"
       ],
       "settings": {
-        "classcss": "",
+        "classcss": "card-align-top",
         "color_scheme": "default",
-        "container_size": "large",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "container_size": "medium",
+        "section_spacing_top": 120,
+        "section_spacing_bottom": 120,
+        "section_mobile_spacing_top": 60,
+        "section_mobile_spacing_bottom": 60,
         "title": "",
         "text": "OUR PRINTING TECHNOLOGIES",
-        "heading_size": "h5",
+        "heading_size": "h2",
         "body_size": "body3",
         "content_alignment": "center",
-        "column_heading_size": "h7",
-        "column_body_size": "body4",
+        "column_heading_size": "h3",
+        "column_body_size": "body3",
         "column_alignment": "left",
         "desktop_columns": 4,
         "desktop_space_between_cards": 24,
@@ -321,12 +329,13 @@
       "type": "contact-form",
       "settings": {
         "color_scheme": "custom-3",
+        "enable_background_around_container": true,
         "container_size": "small",
-        "section_spacing_top": 96,
-        "section_spacing_bottom": 96,
+        "section_spacing_top": 16,
+        "section_spacing_bottom": 8,
         "title": "Contact us",
-        "text": "Fill in the text to remind customers to fill in the form correctly so that your support team could contact them to help with the issues and answer all the questions.",
-        "heading_size": "h5",
+        "text": "",
+        "heading_size": "h2",
         "body_size": "body3",
         "text_align": "center",
         "input_style": "solid",
@@ -348,7 +357,7 @@
           "type": "title",
           "settings": {
             "title": "Want 10% off yout order?",
-            "heading_size": "h4"
+            "heading_size": "h1"
           }
         },
         "template--16729789989105__53d67819-721d-46dc-889c-50c5eafb46fc-1681822195675f4d6f-2": {

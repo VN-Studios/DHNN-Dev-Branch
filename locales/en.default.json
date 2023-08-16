@@ -215,12 +215,17 @@
   "templates": {
     "contact": {
       "form": {
-        "name": "Name",
+        "firstname": "First name",
+        "lastname": "Last name",
         "email": "Email",
-        "phone": "Phone number",
+        "phone": "Phone",
+        "facebook": "Facebook Page",
+        "instagram": "Instagram Page",
+        "file": "Upload your artwork samples here",
+        "choose_file": "Choose file",
         "message": "Message",
         "comment": "Comment",
-        "send": "Send"
+        "send": "Submit form"
       }
     }
   },

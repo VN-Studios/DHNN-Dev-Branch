@@ -5,6 +5,7 @@
   assign default_pallete_border_color_key = settings.default_color_scheme | replace: '-', '_' | append: '_border_color'
   assign default_pallete_button_background_color_key = settings.default_color_scheme | replace: '-', '_' | append: '_button_background_color'
   assign default_pallete_button_text_color_key = settings.default_color_scheme | replace: '-', '_' | append: '_button_text_color'
+  assign default_pallete_outline_button_color_key = settings.default_color_scheme | replace: '-', '_' | append: '_outline_button_color'
 %}
 
 {%- capture css -%}
@@ -78,9 +79,15 @@
       --gsc-button-font-style: {{ settings.button_font_family.style }};
       --gsc-button-font-weight: {{ settings.button_font_family.weight }};
       --gsc-button-letter-spacing: {{ settings.button_font_letter_spacing }}px;
-      --gsc-button-font-size: calc(1.4rem * {{ settings.button_font_scale | times: 0.01 }});
-      --gsc-button-line-height: calc(22 / 14);
+      --gsc-button-font-size: calc(1.6rem * {{ settings.button_font_scale | times: 0.01 }});
+      --gsc-button-line-height: calc(22 / 16);
       --gsc-button-text-transform: {% if settings.button_font_uppercase %}uppercase{% else %}none{% endif %};
+
+      @media only screen and (max-width: 767px) {
+        --gsc-button-font-size: calc(1.4rem * {{ settings.button_font_scale | times: 0.01 }});
+        --gsc-button-line-height: calc(22 / 14);
+      }
+
 
       /* menu */
 
@@ -129,6 +136,7 @@
       --gsc-border-color: {{ settings[default_pallete_border_color_key].red }}, {{ settings[default_pallete_border_color_key].green }}, {{ settings[default_pallete_border_color_key].blue }};
       --gsc-button-background-color: {{ settings[default_pallete_button_background_color_key].red }}, {{ settings[default_pallete_button_background_color_key].green }}, {{ settings[default_pallete_button_background_color_key].blue }};
       --gsc-button-text-color: {{ settings[default_pallete_button_text_color_key].red }}, {{ settings[default_pallete_button_text_color_key].green }}, {{ settings[default_pallete_button_text_color_key].blue }};
+      --gsc-outline-button-color: {{ settings[default_pallete_outline_button_color_key].red }}, {{ settings[default_pallete_outline_button_color_key].green }}, {{ settings[default_pallete_button_background_color_key].blue }};
     }
 
     body,
@@ -139,6 +147,7 @@
       --gsc-border-color: {{ settings.primary_border_color.red }}, {{ settings.primary_border_color.green }}, {{ settings.primary_border_color.blue }};
       --gsc-button-background-color: {{ settings.primary_button_background_color.red }}, {{ settings.primary_button_background_color.green }}, {{ settings.primary_button_background_color.blue }};
       --gsc-button-text-color: {{ settings.primary_button_text_color.red }}, {{ settings.primary_button_text_color.green }}, {{ settings.primary_button_text_color.blue }};
+      --gsc-outline-button-color: {{ settings.primary_outline_button_color.red }}, {{ settings.primary_outline_button_color.green }}, {{ settings.primary_outline_button_color.blue }};
     }
 
     .color-secondary {
@@ -148,6 +157,7 @@
       --gsc-border-color: {{ settings.secondary_border_color.red }}, {{ settings.secondary_border_color.green }}, {{ settings.secondary_border_color.blue }};
       --gsc-button-background-color: {{ settings.secondary_button_background_color.red }}, {{ settings.secondary_button_background_color.green }}, {{ settings.secondary_button_background_color.blue }};
       --gsc-button-text-color: {{ settings.secondary_button_text_color.red }}, {{ settings.secondary_button_text_color.green }}, {{ settings.secondary_button_text_color.blue }};
+      --gsc-outline-button-color: {{ settings.secondary_outline_button_color.red }}, {{ settings.secondary_outline_button_color.green }}, {{ settings.secondary_outline_button_color.blue }};
     }
 
     .color-custom-1 {
@@ -157,6 +167,7 @@
       --gsc-border-color: {{ settings.custom_1_border_color.red }}, {{ settings.custom_1_border_color.green }}, {{ settings.custom_1_border_color.blue }};
       --gsc-button-background-color: {{ settings.custom_1_button_background_color.red }}, {{ settings.custom_1_button_background_color.green }}, {{ settings.custom_1_button_background_color.blue }};
       --gsc-button-text-color: {{ settings.custom_1_button_text_color.red }}, {{ settings.custom_1_button_text_color.green }}, {{ settings.custom_1_button_text_color.blue }};
+      --gsc-outline-button-color: {{ settings.custom_1_outline_button_color.red }}, {{ settings.custom_1_outline_button_color.green }}, {{ settings.custom_1_outline_button_color.blue }};
     }
 
     .color-custom-2 {
@@ -166,6 +177,7 @@
       --gsc-border-color: {{ settings.custom_2_border_color.red }}, {{ settings.custom_2_border_color.green }}, {{ settings.custom_2_border_color.blue }};
       --gsc-button-background-color: {{ settings.custom_2_button_background_color.red }}, {{ settings.custom_2_button_background_color.green }}, {{ settings.custom_2_button_background_color.blue }};
       --gsc-button-text-color: {{ settings.custom_2_button_text_color.red }}, {{ settings.custom_2_button_text_color.green }}, {{ settings.custom_2_button_text_color.blue }};
+      --gsc-outline-button-color: {{ settings.custom_2_outline_button_color.red }}, {{ settings.custom_2_outline_button_color.green }}, {{ settings.custom_2_outline_button_color.blue }};
     }
 
     .color-custom-3 {
@@ -175,6 +187,7 @@
       --gsc-border-color: {{ settings.custom_3_border_color.red }}, {{ settings.custom_3_border_color.green }}, {{ settings.custom_3_border_color.blue }};
       --gsc-button-background-color: {{ settings.custom_3_button_background_color.red }}, {{ settings.custom_3_button_background_color.green }}, {{ settings.custom_3_button_background_color.blue }};
       --gsc-button-text-color: {{ settings.custom_3_button_text_color.red }}, {{ settings.custom_3_button_text_color.green }}, {{ settings.custom_3_button_text_color.blue }};
+      --gsc-outline-button-color: {{ settings.custom_1_outline_button_color.red }}, {{ settings.custom_1_outline_button_color.green }}, {{ settings.custom_1_outline_button_color.blue }};
     }
 
     .color-white {
