@@ -2,12 +2,47 @@
   "sections": {
     "page": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "container_size": "xsmall",
         "section_spacing_top": 96,
         "section_spacing_bottom": 96,
         "show_heading": true
+      }
+    },
+    "070acdbf-7421-4dab-b5fc-b83a3be1637a": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 580,
+        "mobile_height": 340,
+        "desktop_img": "shopify:\/\/shop_images\/artist.jpg",
+        "desktop_overlay_opacity": 40,
+        "mobile_overlay_opacity": 60,
+        "caption": "",
+        "title": "Artists",
+        "text": "",
+        "heading_size": "h1",
+        "body_size": "body3",
+        "desktop_content_position": "align-items:center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 528,
+        "content_spacing": 116,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none",
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
       }
     },
     "1f24a4ca-db9d-4d42-a5ee-87219dba72d4": {
@@ -52,12 +87,15 @@
         "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-2",
         "template--16933628346582__1f24a4ca-db9d-4d42-a5ee-87219dba72d4-column_with_icon-3"
       ],
+      "disabled": true,
       "settings": {
         "classcss": "",
         "color_scheme": "default",
         "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
         "title": "Multicolumn",
         "text": "Show multiple columns of text paired with images or icons to share useful information about your store: shipping and return conditions, special offers and upcoming sales.",
         "heading_size": "h5",
@@ -76,10 +114,92 @@
         "btn_url": "",
         "btn_style": "outline"
       }
+    },
+    "d63d8cc4-0d52-4447-b9be-870fac912f42": {
+      "type": "directory-artist",
+      "blocks": {
+        "template--16939471175894__d63d8cc4-0d52-4447-b9be-870fac912f42-sort_by_letter-1": {
+          "type": "sort_by_letter",
+          "settings": {
+          }
+        },
+        "template--16939471175894__d63d8cc4-0d52-4447-b9be-870fac912f42-artist_list-1": {
+          "type": "artist_list",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16939471175894__d63d8cc4-0d52-4447-b9be-870fac912f42-sort_by_letter-1",
+        "template--16939471175894__d63d8cc4-0d52-4447-b9be-870fac912f42-artist_list-1"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 40,
+        "section_spacing_bottom": 40,
+        "section_mobile_spacing_top": 60,
+        "section_mobile_spacing_bottom": 60
+      }
+    },
+    "3326da9d-2141-4c1c-83a9-75c6d3836407": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-title-1": {
+          "type": "title",
+          "settings": {
+            "title": "Want 10% off yout order?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Get 10% off yout next online purchase, when you sign up to our VIP Newsletter today!",
+            "body_size": "body3"
+          }
+        },
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-subscribe-1": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-title-1",
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-text-1",
+        "template--16939471175894__3326da9d-2141-4c1c-83a9-75c6d3836407-subscribe-1"
+      ],
+      "custom_css": [
+        "input::placeholder,input {color: #808080 !important;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-2",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 8,
+        "section_spacing_bottom": 0,
+        "desktop_height": 240,
+        "mobile_height": 400,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 674,
+        "content_spacing": 24,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
     }
   },
   "order": [
     "page",
-    "1f24a4ca-db9d-4d42-a5ee-87219dba72d4"
+    "070acdbf-7421-4dab-b5fc-b83a3be1637a",
+    "1f24a4ca-db9d-4d42-a5ee-87219dba72d4",
+    "d63d8cc4-0d52-4447-b9be-870fac912f42",
+    "3326da9d-2141-4c1c-83a9-75c6d3836407"
   ]
 }

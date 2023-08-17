@@ -96,7 +96,7 @@
         "body_size": "body3",
         "content_alignment": "left",
         "desktop_content_width": 500,
-        "first_button_text": "Button label",
+        "first_button_text": "Go to catalogue",
         "first_button_link": "",
         "first_button_style": "outline",
         "second_button_text": "",
@@ -457,6 +457,7 @@
             "text": "Add authentic testimonials of your customers talking about your products or brand in their own words, so that future customers can identify with them and their needs.",
             "author_name": "Author",
             "author_designation": "Author designation",
+            "author_image": "shopify:\/\/shop_images\/Frame_41670.png",
             "rating": 4.5,
             "link": ""
           }
@@ -517,6 +518,8 @@
         "container_size": "page-width",
         "section_spacing_top": 96,
         "section_spacing_bottom": 8,
+        "section_mobile_spacing_top": 16,
+        "section_mobile_spacing_bottom": 8,
         "section_layout": "right-quotes",
         "cards_per_slide": 1,
         "quote_alignment": "left",

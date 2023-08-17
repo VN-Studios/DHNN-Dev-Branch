@@ -44,7 +44,7 @@
             "text": "",
             "heading_size": "h6",
             "body_size": "body3",
-            "link_text": "Link label",
+            "link_text": "",
             "link": "",
             "content_position": "center-center"
           }
@@ -74,11 +74,11 @@
           "settings": {
             "color_scheme": "primary",
             "desktop_columns": 1,
-            "desktop_rows": 2,
+            "desktop_rows": 3,
             "caption": "PLACEHOLDER",
             "title": "Lookbook Placeholder",
             "text": "We now have all of your wardrobe essential needs sorted with Yarn Basics. Create full outfits by matching beautiful vibrant Indigenous designs from Aneura, Lore Clothing Co, Traka Outdoor and Custodian Streetwear with items from the Yarn Basics range - because we all know pattern on pattern is a lot!",
-            "heading_size": "h5",
+            "heading_size": "h1",
             "body_size": "body3",
             "content_align": "center",
             "btn_text": "See more",
@@ -96,7 +96,7 @@
             "desktop_rows": 3,
             "image": "shopify:\/\/shop_images\/div.media.jpg",
             "overlay_opacity": 20,
-            "caption": "IMAGE",
+            "caption": "",
             "title": "",
             "text": "",
             "heading_size": "h6",
@@ -152,16 +152,20 @@
         "b02e27fe-8072-4b0e-881a-98f650a86cae"
       ],
       "custom_css": [
-        ".caption {background: #106572; border-radius: 18px !important; color: #ffffff; font-weight: 500; font-family: \"DM Sans\"; font-size: 12px; padding: 6px 12px 6px 12px; min-height: 2px !important;}",
+        ".caption {background: #106572; border-radius: 18px !important; color: #ffffff; font-size: 12px; padding: 6px 12px 6px 12px;}",
         ".collage__item,.rich-text {background: transparent !important; color: #222222 !important;}",
-        "h5 {margin-top: 32.5px; font-family: Inter; font-size: 34px; font-weight: 700; line-height: 46px; letter-spacing: 0em; text-align: center; color: #222222;}",
-        "h5 strong {color: #9d2b2b;}"
+        "h5 {margin-top: 17px;}",
+        ".rich-text__truncate-text-wrapper {margin-top: 32px;}",
+        ".collage__blocks .rich-text__btns {margin-top: 47px;}",
+        "@media only screen and (max-width: 767px) {h5 {margin-top: 24px; } .rich-text__truncate-text-wrapper {margin-top: 24px; } .collage__blocks .rich-text__btns {margin-top: 29px; } .rich-text {padding: 0; }}"
       ],
       "settings": {
         "color_scheme": "default",
         "container_size": "large",
-        "section_spacing_top": 28,
-        "section_spacing_bottom": 60,
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 48,
+        "section_mobile_spacing_bottom": 15,
         "title": "",
         "heading_size": "h5",
         "alignment": "left",
@@ -342,8 +346,10 @@
       "settings": {
         "color_scheme": "default",
         "container_size": "large",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 30,
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 16,
+        "section_mobile_spacing_top": 15,
+        "section_mobile_spacing_bottom": 12,
         "title": "",
         "heading_size": "h5",
         "alignment": "left",
@@ -457,7 +463,9 @@
         "color_scheme": "default",
         "container_size": "large",
         "section_spacing_top": 0,
-        "section_spacing_bottom": 30,
+        "section_spacing_bottom": 16,
+        "section_mobile_spacing_top": 0,
+        "section_mobile_spacing_bottom": 12,
         "title": "",
         "heading_size": "h5",
         "alignment": "left",
@@ -620,6 +628,8 @@
         "container_size": "large",
         "section_spacing_top": 0,
         "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 0,
+        "section_mobile_spacing_bottom": 15,
         "title": "",
         "heading_size": "h5",
         "alignment": "left",
@@ -634,23 +644,17 @@
     "3983da24-6cae-4243-ac7c-42b200d23707": {
       "type": "newsletter",
       "blocks": {
-        "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-caption-1": {
-          "type": "caption",
-          "settings": {
-            "caption": "NEWSLETTER"
-          }
-        },
         "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-title-1": {
           "type": "title",
           "settings": {
-            "title": "Subscribe",
-            "heading_size": "h4"
+            "title": "Want 10% off yout order?",
+            "heading_size": "h1"
           }
         },
         "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-text-1": {
           "type": "text",
           "settings": {
-            "text": "Invite customers to subscribe for early sale access, new in, promotions, and more.",
+            "text": "Get 10% off yout next online purchase, when you sign up to our",
             "body_size": "body3"
           }
         },
@@ -662,7 +666,6 @@
         }
       },
       "block_order": [
-        "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-caption-1",
         "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-title-1",
         "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-text-1",
         "template--16931909730518__3983da24-6cae-4243-ac7c-42b200d23707-subscribe-1"
@@ -673,13 +676,13 @@
         "container_size": "full-screen",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
-        "desktop_height": 280,
-        "mobile_height": 640,
+        "desktop_height": 320,
+        "mobile_height": 420,
         "desktop_overlay_opacity": 20,
         "mobile_overlay_opacity": 20,
         "desktop_content_position": "align-items: center;justify-content:center;",
         "desktop_content_align": "center",
-        "content_max_width": 624,
+        "content_max_width": 694,
         "content_spacing": 16,
         "mobile_content_position": "align-items:center;justify-content:center;",
         "mobile_content_align": "center",

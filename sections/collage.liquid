@@ -4,6 +4,8 @@
   assign color_scheme = options.color_scheme
   assign section_spacing_top = options.section_spacing_top
   assign section_spacing_bottom = options.section_spacing_bottom
+  assign section_mobile_spacing_top = options.section_mobile_spacing_top
+  assign section_mobile_spacing_bottom = options.section_mobile_spacing_bottom
   assign desktop_row_height = options.desktop_row_height
   assign mobile_row_height = options.mobile_row_height
   assign desktop_space_between_cards = options.desktop_space_between_cards | times: 0.1
@@ -14,6 +16,7 @@
   assign alignment = options.alignment
   assign heading_size = options.heading_size
   assign columns = options.columns
+  assign enable_background_around_container = options.enable_background_around_container
 -%}
 
 {% capture css %}
@@ -24,6 +27,20 @@
         --gsc-section-spacing-top: {{ section_spacing_top }}px;
         --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
         --gsc-collage-columns: {{ columns }};
+    }
+
+    @media only screen and (min-width:768px) and (max-width:1199px) {
+        .section-{{section.id}} {
+              --gsc-section-spacing-top: {{ section_spacing_top | times: 0.50 }}px;
+              --gsc-section-spacing-bottom: {{ section_spacing_bottom | times: 0.50 }}px;
+          }
+      }
+
+    @media only screen and (max-width:767px) {
+      .section-{{section.id}} {
+            --gsc-section-spacing-top: {{ section_mobile_spacing_top }}px;
+            --gsc-section-spacing-bottom: {{ section_mobile_spacing_bottom }}px;
+        }
     }
 
     @media {% render 'media-queries', screen: 'md' %} {
@@ -85,7 +102,7 @@
 
 {%- render 'inline-css-minifier', css: css -%}
 
-<div class='collage section section-{{ section.id }} color-{{ color_scheme }} {% if enable_carousel_on_mobile %}collage--with-carousel{% endif %}'>
+<div class='collage section section-{{ section.id }} {% if enable_background_around_container != true %} color-{{ color_scheme }}{% endif %} {% if enable_background_around_container %} container{% endif %} {% if enable_carousel_on_mobile %}collage--with-carousel{% endif %}'>
   {%- for block in section.blocks -%}
     {%- if block.settings.link == blank and block.type == 'quote' -%}
       <sidebar-component
@@ -114,67 +131,67 @@
       </sidebar-component>
     {%- endif -%}
   {%- endfor -%}
-
-  <div class='collage__container container container--{{ container_size }} section-spacing'>
-    {%- if title != blank -%}
-      <div class='collage__header {% if alignment == 'center' %}collage__header--center{% endif %}'>
-        <h5 class='collage__title {{ heading_size }}'>{{ title }}</h5>
-      </div>
-    {%- endif -%}
-    {%- if section.blocks.size > 0 -%}
-      <div class='collage__blocks'>
-        <div class='collage__card-grid'>
-          {%- for block in section.blocks -%}
-            <div
-              class='collage__item collage__card-grid-item block-{{ block.id }} color-{{ block.settings.color_scheme }}'
-              {{ block.shopify_attributes }}
-            >
-              {%- render 'collage-item', block: block, section: section -%}
-            </div>
-          {%- endfor -%}
+  <div class="{% if enable_background_around_container %} section collage-container color-{{ color_scheme }}{% endif %}">
+    <div class='collage__container container container--{{ container_size }} section-spacing'>
+      {%- if title != blank -%}
+        <div class='collage__header {% if alignment == 'center' %}collage__header--center{% endif %}'>
+          <h5 class='collage__title {{ heading_size }}'>{{ title }}</h5>
         </div>
-        {%- if enable_carousel_on_mobile -%}
-          <carousel-component class='carousel collage__carousel' data-section-id='{{ section.id }}' with-stop-on-hover>
-            <div class='carousel__viewport collage__carousel-viewport embla' data-carousel-viewport>
-              <div class='carousel__container' data-carousel-container>
-                {%- for block in section.blocks -%}
-                  <div
-                    class='collage__item carousel__slide collage__carousel-slide block-{{ block.id }} color-{{ block.settings.color_scheme }}'
-                    {{ block.shopify_attributes }}
-                  >
-                    {%- render 'collage-item', block: block, section: section -%}
-                  </div>
-                {%- endfor -%}
-              </div>
-            </div>
-            {%- if section.blocks.size > 1 -%}
-              <carousel-dots
-                class='solid-dots-carousel collage__solid-dots-carousel'
-                data-contain-scroll='keepSnaps'
-                data-align='center'
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class='collage__blocks'>
+          <div class='collage__card-grid'>
+            {%- for block in section.blocks -%}
+              <div
+                class='collage__item collage__card-grid-item block-{{ block.id }} color-{{ block.settings.color_scheme }}'
+                {{ block.shopify_attributes }}
               >
-                <div class='solid-dots-carousel__viewport embla' data-carousel-viewport>
-                  <div class='solid-dots-carousel__container' data-carousel-container>
-                    {%- for block in section.blocks -%}
-                      <carousel-dot
-                        class='solid-dots-carousel__solid-dot {% if forloop.index == 1 %}is-primary{% endif %}'
-                        tabindex='0'
-                        data-dot-index='{{ forloop.index0 }}'
-                      >
-                        <div class='solid-dots-carousel__solid-dot-circle'></div>
-                      </carousel-dot>
-                    {%- endfor -%}
-                  </div>
+                {%- render 'collage-item', block: block, section: section -%}
+              </div>
+            {%- endfor -%}
+          </div>
+          {%- if enable_carousel_on_mobile -%}
+            <carousel-component class='carousel collage__carousel' data-section-id='{{ section.id }}' with-stop-on-hover>
+              <div class='carousel__viewport collage__carousel-viewport embla' data-carousel-viewport>
+                <div class='carousel__container' data-carousel-container>
+                  {%- for block in section.blocks -%}
+                    <div
+                      class='collage__item carousel__slide collage__carousel-slide block-{{ block.id }} color-{{ block.settings.color_scheme }}'
+                      {{ block.shopify_attributes }}
+                    >
+                      {%- render 'collage-item', block: block, section: section -%}
+                    </div>
+                  {%- endfor -%}
                 </div>
-              </carousel-dots>
-            {%- endif -%}
-          </carousel-component>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
+              </div>
+              {%- if section.blocks.size > 1 -%}
+                <carousel-dots
+                  class='solid-dots-carousel collage__solid-dots-carousel'
+                  data-contain-scroll='keepSnaps'
+                  data-align='center'
+                >
+                  <div class='solid-dots-carousel__viewport embla' data-carousel-viewport>
+                    <div class='solid-dots-carousel__container' data-carousel-container>
+                      {%- for block in section.blocks -%}
+                        <carousel-dot
+                          class='solid-dots-carousel__solid-dot {% if forloop.index == 1 %}is-primary{% endif %}'
+                          tabindex='0'
+                          data-dot-index='{{ forloop.index0 }}'
+                        >
+                          <div class='solid-dots-carousel__solid-dot-circle'></div>
+                        </carousel-dot>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </carousel-dots>
+              {%- endif -%}
+            </carousel-component>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
   </div>
 </div>
-
 {% schema %}
 {
   "name": "t:sections.collage.name",
@@ -214,6 +231,12 @@
       "info": "t:sections.general_section_settings.color_scheme_tip"
     },
     {
+      "type": "checkbox",
+      "id": "enable_background_around_container",
+      "default": false,
+      "label": "t:sections.general_section_settings.enable_background_around_container_label"
+    },
+    {
       "type": "select",
       "id": "container_size",
       "options": [
@@ -238,6 +261,10 @@
       "label": "t:sections.general_section_settings.container_size.label"
     },
     {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
       "type": "range",
       "id": "section_spacing_top",
       "min": 0,
@@ -254,6 +281,30 @@
       "max": 100,
       "step": 1,
       "default": 48,
+      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
+      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+      "label": "t:sections.general_section_settings.section_spacing_top.label"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
       "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
       "label": "t:sections.general_section_settings.section_spacing_bottom.label"
     },

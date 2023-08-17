@@ -67,12 +67,12 @@
     >
   {%- endif -%}
 
-  {% if with_placeholder == true %}
+  {%- if with_placeholder == true -%}
     {%- if desktop_img == blank and desktop_video == blank and mobile_img == blank and mobile_video == blank -%}
       {{
         placeholder_type
         | placeholder_svg_tag: 'placeholder-image placeholder-image--with-content image media__image media__image-placeholder'
       }}
     {%- endif -%}
-  {% endif %}
+  {%- endif -%}
 </div>

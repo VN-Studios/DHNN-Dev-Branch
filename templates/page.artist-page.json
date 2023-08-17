@@ -61,6 +61,8 @@
         "container_size": "large",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
         "title": "Multicolumn",
         "text": "Show multiple columns of text paired with images or icons to share useful information about your store: shipping and return conditions, special offers and upcoming sales.",
         "heading_size": "h5",
@@ -87,6 +89,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "white",
+            "onlydesktop": false,
+            "onlymobile": false,
             "desktop_columns": 1,
             "desktop_rows": 1,
             "image": "shopify:\/\/shop_images\/Image_Placeholder.png",
@@ -136,6 +140,8 @@
           "disabled": true,
           "settings": {
             "color_scheme": "white",
+            "onlydesktop": false,
+            "onlymobile": false,
             "desktop_columns": 2,
             "desktop_rows": 1,
             "overlay_opacity": 20,
@@ -158,7 +164,7 @@
             "caption": "Aborigional Kayardild Woman",
             "title": "Carol Nampijinpa Larry",
             "text": "Carol Nampijinpa Larry was born in Kiwirrkura, one of the most remote communities in Australia, and her family heritage is the Luritja people of the Western Desert. She went to school in Papunya, where she learned Warlpiri and English. Carol had 4 children, as well as a partner who passed away many years ago. She moved to Nyirripi to live with her daughter Melissa Nungarrayi Larry when Melissa married a Warlpiri man from Nyirripi. Melissa also paints for Warlukurlangu Artists and Carol and Melissa often paint together at the art centre.",
-            "heading_size": "h5",
+            "heading_size": "h3",
             "body_size": "body3",
             "content_align": "left",
             "btn_text": "@warlu_art",
@@ -174,11 +180,19 @@
         "template--16930581610710__b240f85f-ae5e-44ac-8c19-5efa563b0898-image-2",
         "d738dad2-320b-44f9-b1d2-2e7d8380d5a6"
       ],
+      "custom_css": [
+        ".rich-text__content > h5 {order: -1; margin: 0 0 3px;}",
+        ".collage-container {background-color: rgb(var(--gsc-white-color));}",
+        "@media only screen and (max-width: 767px) {.rich-text--block {padding: 0; } .collage__card-grid-item {height: auto; aspect-ratio: 1; } .collage__card-grid {grid-auto-rows: auto; }}"
+      ],
       "settings": {
         "color_scheme": "default",
+        "enable_background_around_container": true,
         "container_size": "medium",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
         "title": "",
         "heading_size": "h5",
         "alignment": "left",
@@ -195,6 +209,7 @@
       "blocks": {
         "template--16930581610710__74cf82b3-5f95-4258-a630-f5ba2ce73aee-image-banner-2": {
           "type": "image-banner",
+          "disabled": true,
           "settings": {
             "color_scheme": "white",
             "desktop_img": "shopify:\/\/shop_images\/div.images-with-text__image-list-item-media-wrapper_faf3e746-0953-420e-b711-a4a29df14603.jpg",
@@ -287,10 +302,10 @@
             "content_max_width": 424,
             "desktop_content_align": "left",
             "mobile_content_align": "left",
-            "btn_text": "Button label",
+            "btn_text": "",
             "btn_url": "",
             "btn_style": "solid",
-            "extra_btn_text": "Button label",
+            "extra_btn_text": "",
             "extra_btn_url": "",
             "extra_btn_style": "solid"
           }
@@ -310,10 +325,10 @@
             "content_max_width": 424,
             "desktop_content_align": "left",
             "mobile_content_align": "left",
-            "btn_text": "Button label",
+            "btn_text": "",
             "btn_url": "",
             "btn_style": "solid",
-            "extra_btn_text": "Button label",
+            "extra_btn_text": "",
             "extra_btn_url": "",
             "extra_btn_style": "solid"
           }
@@ -326,18 +341,23 @@
         "template--16930581610710__74cf82b3-5f95-4258-a630-f5ba2ce73aee-split-image-banner-2",
         "3ca68724-d040-48b3-abb3-ddb2aaa33395"
       ],
+      "custom_css": [
+        ".caption.split-image-banner__caption {background: #106572; border-radius: 18px !important; color: #ffffff; font-size: 12px; padding: 6px 12px 6px 12px; display: inline-block;}"
+      ],
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 960,
+        "container_size": "medium",
+        "section_spacing_top": 80,
+        "section_spacing_bottom": 80,
+        "section_mobile_spacing_top": 30,
+        "section_mobile_spacing_bottom": 30,
+        "desktop_height": 620,
         "mobile_height": 780,
-        "enable_circle_navigation": true,
+        "enable_circle_navigation": false,
         "enable_arrows_navigation": true,
-        "arrows_style": "corner-buttons",
-        "show_arrows_on_hover": false,
+        "arrows_style": "aside-buttons",
+        "show_arrows_on_hover": true,
         "transition_style": "swipe",
         "enable_autoplay": false,
         "autoplay_interval": 3,
@@ -346,16 +366,24 @@
     },
     "9f2217e7-dea5-4dcf-a8f9-5954e9aecf0e": {
       "type": "featured-collection",
+      "custom_css": [
+        ".product-card__price + .text-center,.product-card__price .product-card-sale-amount-badge {display: none;}"
+      ],
       "settings": {
         "color_scheme": "default",
         "container_size": "page-width",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
+        "section_spacing_top": 40,
+        "section_spacing_bottom": 38,
+        "section_mobile_spacing_top": 24,
+        "section_mobile_spacing_bottom": 24,
         "section_layout": "carousel-overflow",
+        "btn_text": "Shop all products",
+        "btn_url": "shopify:\/\/collections\/bed-bath-2",
+        "btn_style": "outline",
         "title": "Products",
-        "heading_size": "h5",
+        "heading_size": "h3",
         "alignment": "center",
-        "collection": "",
+        "collection": "bed-bath-2",
         "featured_products": [
 
         ],

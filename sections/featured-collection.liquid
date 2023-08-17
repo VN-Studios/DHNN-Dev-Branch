@@ -4,6 +4,8 @@
   assign alignment = options.alignment
   assign section_spacing_top = options.section_spacing_top
   assign section_spacing_bottom = options.section_spacing_bottom
+  assign section_mobile_spacing_top = options.section_mobile_spacing_top
+  assign section_mobile_spacing_bottom = options.section_mobile_spacing_bottom
   assign collection = options.collection
   assign container_size = options.container_size
   assign enable_carousel_on_mobile = options.enable_carousel_on_mobile
@@ -13,6 +15,9 @@
   assign autoplay_interval = options.autoplay_interval
   assign featured_products = options.featured_products
   assign heading_size = options.heading_size
+  assign btn_text = options.btn_text
+  assign btn_url = options.btn_url
+  assign btn_style = options.btn_style
 
   assign collection_card_count = 1
   assign product_limit = options.cards_to_show | minus: collection_card_count
@@ -51,6 +56,20 @@
         --gsc-columns: 2;
         --gsc-section-spacing-top: {{ section_spacing_top }}px;
         --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
+    }
+
+    @media only screen and (min-width:768px) and (max-width:1199px) {
+      .section-{{section.id}} {
+            --gsc-section-spacing-top: {{ section_spacing_top | times: 0.50 }}px;
+            --gsc-section-spacing-bottom: {{ section_spacing_bottom | times: 0.50 }}px;
+        }
+    }
+
+    @media only screen and (max-width:767px) {
+      .section-{{section.id}} {
+            --gsc-section-spacing-top: {{ section_mobile_spacing_top }}px;
+            --gsc-section-spacing-bottom: {{ section_mobile_spacing_bottom }}px;
+        }
     }
 
     @media {% render 'media-queries', screen: 'md' %} {
@@ -153,6 +172,18 @@
         %}
       {% endif %}
     {% endif %}
+
+    {%- if btn_text != blank -%}
+      <div class="collection_all_button">
+        <a
+          class='btn btn--{{ btn_style }}'
+          href='{% if btn_url != blank %}{{ btn_url }}{% else %}#{% endif %}'
+          aria-label='{{- btn_text -}}'
+        >
+          {{- btn_text -}}
+        </a>
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -219,12 +250,16 @@
       "label": "t:sections.general_section_settings.container_size.label"
     },
     {
+      "type": "header",
+      "content": "Desktop spacing"
+    },
+    {
       "type": "range",
       "id": "section_spacing_top",
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": 48,
+      "default": 0,
       "unit": "t:sections.general_section_settings.section_spacing_top.unit",
       "label": "t:sections.general_section_settings.section_spacing_top.label"
     },
@@ -234,7 +269,31 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": 48,
+      "default": 0,
+      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
+      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+      "label": "t:sections.general_section_settings.section_spacing_top.label"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
       "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
       "label": "t:sections.general_section_settings.section_spacing_bottom.label"
     },
@@ -257,6 +316,41 @@
       ],
       "default": "carousel",
       "label": "t:sections.featured_collection.section_layout.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.collage.blocks.rich_text.buttons_setting_header.content"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "default": "Button label",
+      "label": "t:sections.collage.blocks.rich_text.btn_text.label"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "t:sections.collage.blocks.rich_text.btn_url.label"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "t:sections.collage.blocks.rich_text.btn_style.option_1"
+        },
+        {
+          "value": "outline",
+          "label": "t:sections.collage.blocks.rich_text.btn_style.option_2"
+        },
+        {
+          "value": "link",
+          "label": "t:sections.collage.blocks.rich_text.btn_style.option_3"
+        }
+      ],
+      "default": "link",
+      "label": "t:sections.collage.blocks.rich_text.btn_style.label"
     },
     {
       "type": "header",

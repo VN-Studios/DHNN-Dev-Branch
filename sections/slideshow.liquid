@@ -7,6 +7,8 @@
   assign desktop_height = options.desktop_height
   assign section_spacing_top = options.section_spacing_top
   assign section_spacing_bottom = options.section_spacing_bottom
+  assign section_mobile_spacing_top = options.section_mobile_spacing_top
+  assign section_mobile_spacing_bottom = options.section_mobile_spacing_bottom
   assign container_size = options.container_size
 
   assign enable_background_around_container = options.enable_background_around_container
@@ -28,6 +30,19 @@
         --gsc-height: {{mobile_height}}px;
         --gsc-section-spacing-top: {{ section_spacing_top }}px;
         --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
+    }
+    @media only screen and (min-width:768px) and (max-width:1199px) {
+        .section-{{section.id}} {
+              --gsc-section-spacing-top: {{ section_spacing_top | times: 0.50 }}px;
+              --gsc-section-spacing-bottom: {{ section_spacing_bottom | times: 0.50 }}px;
+          }
+      }
+
+    @media only screen and (max-width:767px) {
+      .section-{{section.id}} {
+            --gsc-section-spacing-top: {{ section_mobile_spacing_top }}px;
+            --gsc-section-spacing-bottom: {{ section_mobile_spacing_bottom }}px;
+        }
     }
 
     @media {% render 'media-queries', screen: 'md' %} {
@@ -141,7 +156,7 @@
                           endif
                           render 'split-image-banner-content', heading_size: block.settings.heading_size, body_size: block.settings.body_size, title: block.settings.title, caption: block.settings.caption, text: block.settings.text, btn_text: block.settings.btn_text, btn_url: block.settings.btn_url, extra_btn_text: block.settings.extra_btn_text, extra_btn_url: block.settings.extra_btn_url, btn_style: block.settings.btn_style, extra_btn_style: block.settings.extra_btn_style
                           if block.settings.image_proportion < 100
-                            render 'media-with-art-direction', class: 'split-image-banner__media split-image-banner__right-media', with_placeholder: true, desktop_img: block.settings.desktop_right_img, mobile_img: block.settings.mobile_right_img, desktop_video: block.settings.right_video, mobile_video: block.settings.right_video
+                            render 'media-with-art-direction', class: 'split-image-banner__media split-image-banner__right-media', with_placeholder: false, desktop_img: block.settings.desktop_right_img, mobile_img: block.settings.mobile_right_img, desktop_video: block.settings.right_video, mobile_video: block.settings.right_video
                           endif
                         -%}
                       </div>
@@ -339,10 +354,18 @@
         {
           "value": "large",
           "label": "t:sections.general_section_settings.container_size.large_width_option"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.general_section_settings.container_size.medium_width_option"
         }
       ],
       "default": "full-screen",
       "label": "t:sections.general_section_settings.container_size.label"
+    },
+    {
+      "type": "header",
+      "content": "Desktop spacing"
     },
     {
       "type": "range",
@@ -361,6 +384,30 @@
       "max": 100,
       "step": 1,
       "default": 0,
+      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
+      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+      "label": "t:sections.general_section_settings.section_spacing_top.label"
+    },
+    {
+      "type": "range",
+      "id": "section_mobile_spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
       "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
       "label": "t:sections.general_section_settings.section_spacing_bottom.label"
     },
